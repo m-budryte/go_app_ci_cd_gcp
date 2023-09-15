@@ -4,8 +4,6 @@ steps:
     args: ["version"]
     env: ["GOPATH=."]
 
-  - name: golangci/golangci-lint
-
   - id: run_app
     name: "gcr.io/cloud-builders/go"
     args: ["run","./src/timechecker/main.go"]
