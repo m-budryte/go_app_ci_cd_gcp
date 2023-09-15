@@ -20,5 +20,5 @@ steps:
 
   - id: your_step_here
     name: "gcr.io/cloud-builders/go"
-    args: ["run","main"]
+    args: ["run","main.go"]
     env: ["GOPATH=./src/timechecker"]
