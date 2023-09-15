@@ -4,9 +4,9 @@ steps:
     args: ["version"]
     env: ["GOPATH=."]
 
-  # - id: go_linter
-  #   name: "golangci/golangci-lint"
-  #   args: ["golangci-lint","run", "./src/*/**"]
+  - id: go_linter
+    name: "golangci/golangci-lint"
+    args: ["run", "./src/*/**"]
 
   # - id: go_test
   #   name: "gcr.io/cloud-builders/go"
@@ -18,7 +18,7 @@ steps:
   #   args: ["helloworld"]
   #   env: ["GOPATH=."]
 
-  - id: your_step_here
+  - id: run_app
     name: "gcr.io/cloud-builders/go"
     args: ["run","./src/timechecker/main.go"]
     env: ["GOPATH=./"]
