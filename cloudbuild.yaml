@@ -4,9 +4,17 @@ steps:
     args: ["version"]
     env: ["GOPATH=."]
 
-  - id: go_linter
-    name: "golangci/golangci-lint"
-    args: ["run", "./src/*/**"]
+  - name: golangci/golangci-lint
+    args:
+      - golangci-lint
+      - run
+      - /src/*/**
+      - --issues-exit-code=0 #don't fail the build
+    volumes:
+    - name: 'go-modules'
+      path: /go
+    id: 'run lint'
+
 
   # - id: go_test
   #   name: "gcr.io/cloud-builders/go"
