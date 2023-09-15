@@ -1,8 +1,4 @@
 steps:
-  # see https://www.npmjs.com/package/editorconfig-checker
-  - id: eclint
-    name: "e53e225/editorconfig-checker"
-
   - id: go_version
     name: "gcr.io/cloud-builders/go"
     args: ["version"]
@@ -24,5 +20,5 @@ steps:
 
   - id: your_step_here
     name: "gcr.io/cloud-builders/go"
-    args: ["run","helloworld"]
-    env: ["GOPATH=."]
+    args: ["run","main"]
+    env: ["GOPATH=./src/timechecker"]
