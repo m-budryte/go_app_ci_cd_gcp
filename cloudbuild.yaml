@@ -6,7 +6,7 @@ steps:
 
   - id: go_linter
     name: "golangci/golangci-lint"
-    args: ["golangci-lint","run", "src/*/**"]
+    args: ["golangci-lint","run src/*/**"]
 
   - id: go_test
     name: "gcr.io/cloud-builders/go"
