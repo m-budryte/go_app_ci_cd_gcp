@@ -10,9 +10,6 @@ steps:
       - run
       - /src/*/**
       - --issues-exit-code=0 #don't fail the build
-    volumes:
-    - name: 'go-modules'
-      path: /go
     id: 'run lint'
 
 
