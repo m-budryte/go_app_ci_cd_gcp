@@ -11,5 +11,5 @@ steps:
 
   - id: run_app
     name: "gcr.io/cloud-builders/go"
-    args: ["run","./src/timechecker/main.go"]
+    args: ["run","main.go"]
     env: ["GOPATH=./"]
