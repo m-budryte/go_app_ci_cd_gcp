@@ -4,6 +4,10 @@ steps:
     args: ["version"]
     env: ["GOPATH=."]
 
+  - id: go_test
+    name: "gcr.io/cloud-builders/go"
+    args: ["test"]
+
   - id: run_app
     name: "gcr.io/cloud-builders/go"
     args: ["run","./src/timechecker/main.go"]
